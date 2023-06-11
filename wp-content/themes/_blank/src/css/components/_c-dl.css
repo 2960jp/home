@@ -1,0 +1,31 @@
+.c-dl {
+  --dl-width: 180px;
+  --padding: 1rem;
+
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  padding-top: var(--padding);
+  padding-bottom: var(--padding);
+
+  &:not(:last-of-type) {
+    border-bottom: 1px solid theme(colors.gray.200);
+  }
+
+  dt {
+    font-weight: bold;
+  }
+  @media screen(lg) {
+    flex-direction: row;
+    --padding: 1.5rem;
+
+    dt {
+      width: var(--dl-width);
+    }
+
+    dd {
+      width: calc(100% - var(--dl-width));
+    }
+  }
+}

@@ -1,0 +1,3 @@
+.c-marker {
+  background: linear-gradient(transparent 60%, theme(colors.yellow.500) 60%);
+}

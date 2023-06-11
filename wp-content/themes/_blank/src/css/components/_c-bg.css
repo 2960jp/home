@@ -1,0 +1,41 @@
+:root {
+  --bg-position-top: 200px;
+
+  @media screen(lg) {
+    --bg-position-top: 300px;
+  }
+}
+
+.c-bg-position-top-low {
+  --bg-position-top: 100px;
+
+  @media screen(lg) {
+    --bg-position-top: 150px;
+  }
+}
+
+.c-bg-primary {
+  background: linear-gradient(
+    180deg,
+    white 0%,
+    white var(--bg-position-top),
+    theme(colors.primary) var(--bg-position-top),
+    theme(colors.primary) 80%,
+    white 80%,
+    white 100%
+  );
+}
+
+.c-bg {
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    transparent 50%,
+    theme(colors.primary) 50%,
+    theme(colors.primary) 100%
+  );
+}
+
+.c-bg-transparent-dark {
+  background: linear-gradient(180deg, transparent 0%, transparent 50%, theme(colors.dark) 50%, theme(colors.dark) 100%);
+}

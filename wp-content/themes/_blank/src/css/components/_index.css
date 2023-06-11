@@ -1,0 +1,17 @@
+@import 'blocks/_index';
+/* @import '_c-footer'; */
+@import '_c-footer-links';
+@import '_c-btn';
+@import '_c-card';
+@import '_c-heading';
+@import '_c-categories';
+@import '_c-policy';
+@import '_c-faq';
+@import '_c-note';
+@import '_c-form';
+@import '_c-table';
+@import '_c-marker';
+@import '_c-bg';
+@import '_c-page-header';
+@import '_c-link';
+@import '_c-dl';

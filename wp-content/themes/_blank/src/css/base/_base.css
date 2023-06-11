@@ -1,0 +1,22 @@
+:root {
+  --transition-duration: 300ms;
+  --global--spacing-horizontal: 25px;
+  --global--spacing-vertical: 30px;
+
+  --global--spacing-unit: 20px;
+
+  --global--font-size-xs: 1rem;
+  --responsive--spacing-horizontal: calc(2 * var(--global--spacing-horizontal) * 0.6);
+  --responsive--aligndefault-width: calc(100vw - var(--responsive--spacing-horizontal));
+  --responsive--alignright-margin: var(--global--spacing-horizontal);
+  --responsive--alignleft-margin: var(--global--spacing-horizontal);
+
+  --header-height: 73px;
+}
+
+body {
+  word-break: break-word;
+  overflow-wrap: break-word;
+
+  color: theme(colors.text);
+}

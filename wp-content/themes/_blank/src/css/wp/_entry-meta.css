@@ -1,0 +1,27 @@
+.entry-meta {
+  font-size: 14px;
+
+  .post-categories {
+    a {
+      display: inline-block;
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
+      background-color: theme(colors.primary);
+      color: white;
+      font-weight: bold;
+      /* border: 1px solid theme(colors.primary); */
+      /* border-radius: 0.25rem; */
+    }
+  }
+}
+
+.entry-meta-author {
+  a {
+    display: inline-block;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    background-color: theme(colors.primary);
+    /* border-radius: 0.25rem; */
+    color: white;
+  }
+}

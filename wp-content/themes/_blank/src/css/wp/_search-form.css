@@ -1,0 +1,14 @@
+.search-form {
+  input {
+    border: 2px solid theme(colors.gray.200);
+    border-radius: 4px;
+    padding: 8px 12px;
+    background-color: #fff;
+  }
+
+  [type='submit'] {
+    cursor: pointer;
+    background-color: theme(colors.primary);
+    color: white;
+  }
+}

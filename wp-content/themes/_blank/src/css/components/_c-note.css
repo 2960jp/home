@@ -1,0 +1,14 @@
+.c-note {
+  position: relative;
+  display: inline-block;
+  text-indent: -1.125em;
+  padding-left: 1em;
+  /* font-size: 0.8em; */
+
+  &::before {
+    content: '\203B';
+    display: inline-block;
+    width: 1.125em;
+    text-indent: 0;
+  }
+}

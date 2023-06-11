@@ -1,0 +1,29 @@
+.c-footer-links {
+  @apply max-w-xl mx-auto flex flex-wrap justify-center text-xs;
+
+  > a {
+    @apply bg-white p-8 flex flex-col gap-2 items-center justify-center text-text aspect-square;
+    width: 50%;
+
+    @media screen(sm) {
+      width: 25%;
+
+      &:not(:first-child) {
+        border-left-width: 1px;
+      }
+
+      &:hover {
+        @apply bg-secondary;
+      }
+    }
+
+    @media (width < theme(screens.sm)) {
+      &:nth-child(even) {
+        border-left-width: 1px;
+      }
+      &:nth-child(n + 3) {
+        border-top-width: 1px;
+      }
+    }
+  }
+}

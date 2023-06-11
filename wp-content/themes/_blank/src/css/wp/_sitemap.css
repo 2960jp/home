@@ -1,0 +1,61 @@
+.wsp-container {
+  position: relative;
+
+  a {
+    text-decoration: underline;
+
+    @media screen(md) {
+      &:hover {
+        color: theme(colors.primary);
+      }
+    }
+  }
+
+  li {
+    &::marker {
+      color: theme(colors.primary);
+    }
+  }
+}
+
+.wsp-pages-list,
+.wsp-lists-list {
+  margin-inline-start: 1.5rem;
+  list-style-type: disc;
+  li {
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+  }
+
+  > li {
+    position: relative;
+
+    > .children {
+      list-style-type: circle;
+      > li > .children {
+        list-style-type: square;
+        font-size: 0.9em;
+      }
+    }
+  }
+
+  .children {
+    margin-inline-start: 1rem;
+    > li {
+      position: relative;
+    }
+  }
+}
+
+.page_item {
+  position: relative;
+}
+
+.children {
+  position: relative;
+}
+
+.wsp-lists-list {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}

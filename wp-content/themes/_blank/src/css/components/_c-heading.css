@@ -1,0 +1,38 @@
+.c-heading {
+  position: relative;
+  font-weight: normal;
+}
+
+.c-heading__sm {
+  display: block;
+  font-size: 12px;
+
+  @media screen(lg) {
+    font-size: 14px;
+  }
+
+  &::before {
+    content: '';
+    width: 0.875em;
+    height: 0.875em;
+    background-color: theme(colors.secondary);
+    display: inline-flex;
+    vertical-align: middle;
+    margin-right: 0.5rem;
+  }
+}
+.c-heading__lg {
+  display: block;
+  letter-spacing: 0.1em;
+  font-size: 30px;
+  font-weight: 300;
+  text-transform: uppercase;
+  @apply font-nunito;
+
+  @media screen(lg) {
+    font-size: 48px;
+  }
+  @media screen(xl) {
+    font-size: 60px;
+  }
+}

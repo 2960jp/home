@@ -1,0 +1,356 @@
+.entry-content {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+
+  > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator):not(.woocommerce):not(
+      [class*='max-w']
+    ) {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  > * {
+    + *:not(hr):not([class*='mt']) {
+      margin-top: 1.5rem;
+
+      @media screen(lg) {
+        margin-top: 2rem;
+      }
+    }
+
+    + h2:not([class*='mt']) {
+      margin-top: 3rem;
+    }
+  }
+
+  figure.wp-caption a:focus img {
+    outline-offset: 2px;
+  }
+
+  ul,
+  ol {
+    margin: 0;
+    /* padding-left: calc(2 * var(--global--spacing-horizontal)); */
+    padding-left: 1.5rem;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    position: relative;
+    clear: both;
+    font-weight: bold;
+  }
+
+  h2,
+  h1 {
+    margin-bottom: 1rem;
+    font-size: 24px;
+
+    + * {
+      margin-top: 1rem;
+    }
+  }
+
+  h3:not([class*='c-title']) {
+    font-size: 1.25em;
+  }
+  h4:not([class*='c-title']) {
+    font-size: 1.125em;
+  }
+
+  .c-title {
+    margin-bottom: 2.5rem;
+  }
+
+  /* .c-title-02 {
+    margin-bottom: 2rem;
+  } */
+
+  h3,
+  h4,
+  h5,
+  h6 {
+    + * {
+      margin-top: 1rem;
+    }
+  }
+
+  a {
+    text-decoration-line: underline;
+  }
+
+  .single & {
+    h1:not([class*='c-title']),
+    h2:not([class*='c-title']) {
+      /* padding-bottom: 0.5rem; */
+      padding: 0.5rem;
+      padding-left: 1rem;
+      background-color: theme(colors.primary);
+      color: white;
+
+      /* &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        background-color: theme(colors.primary);
+        height: 4px;
+      }
+      &::before {
+        left: 0;
+        background-color: theme(colors.primary);
+        width: 3em;
+      }
+      &::after {
+        background-color: theme(colors.gray.200);
+        width: calc(100% - 3em);
+        left: 3em;
+      } */
+    }
+
+    h3:not([class*='c-title']) {
+      position: relative;
+      padding: 0.5rem;
+      padding-left: 1.25rem;
+      /* border-left: 4px solid theme(colors.primary); */
+      border-bottom: 4px solid theme(colors.primary);
+
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0.95em;
+        width: 0.625rem;
+        height: 0.625rem;
+        border-radius: 9999px;
+        background-color: theme(colors.primary);
+      }
+    }
+    h4:not([class*='c-title']),
+    h5:not([class*='c-title']),
+    h6:not([class*='c-title']) {
+      padding: 0.5rem;
+      padding-top: 0;
+      padding-left: 1.5em;
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 12px;
+
+        background-color: theme(colors.primary);
+        width: 0.75em;
+        height: 4px;
+      }
+      /* border-left: 4px solid theme(colors.primary); */
+    }
+  }
+
+  p {
+    word-break: break-word;
+    line-height: 2;
+
+    + p:not([class*='mt']) {
+      margin-top: 1.5rem;
+    }
+  }
+
+  ul {
+    list-style-type: disc;
+
+    ul {
+      list-style-type: circle;
+    }
+  }
+
+  ol {
+    list-style-type: decimal;
+
+    ul {
+      list-style-type: circle;
+    }
+  }
+
+  dt {
+    font-weight: bold;
+
+    &:not(:first-child) {
+      margin-top: 1rem;
+    }
+  }
+
+  dd {
+    margin: 0;
+    /* padding-left: calc(2 * var(--global--spacing-horizontal)); */
+  }
+
+  table:not(.c-table),
+  .wp-block-table {
+    width: 100%;
+    min-width: 240px;
+    border-collapse: collapse;
+  }
+  table:not(.c-table) thead,
+  table:not(.c-table) tfoot,
+  .wp-block-table thead,
+  .wp-block-table tfoot {
+    text-align: center;
+  }
+  table:not(.c-table) td,
+  table:not(.c-table) th,
+  .wp-block-table td,
+  .wp-block-table th {
+    padding: calc(0.5 * var(--global--spacing-unit));
+    border: 1px solid #f3f4f6;
+  }
+
+  table:not(.c-table) figcaption,
+  .wp-block-table figcaption {
+    /* color: var(--global--color-primary); */
+    font-size: var(--global--font-size-xs);
+  }
+  a {
+    cursor: pointer;
+    text-underline-offset: 3px;
+    text-decoration-skip-ink: all;
+  }
+  a:hover {
+    text-decoration-style: dotted;
+    text-decoration-skip-ink: none;
+  }
+  .aligncenter {
+    clear: both;
+    display: block;
+    float: none;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+  }
+
+  .alignleft {
+    float: left;
+    margin-right: var(--global--spacing-horizontal);
+    margin-bottom: var(--global--spacing-vertical);
+  }
+
+  .alignleft {
+    text-align: left;
+    margin-top: 0;
+  }
+  .btn a {
+    text-decoration: none;
+  }
+  @media only screen and (min-width: 482px) {
+    > .wp-block-image > .alignleft,
+    > .wp-block-image > .alignright {
+      max-width: 50%;
+    }
+  }
+  @media only screen and (max-width: 481px) {
+    > .wp-block-image > .alignleft,
+    > .wp-block-image > .alignright {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+
+  > .alignleft {
+    max-width: var(--responsive--aligndefault-width);
+  }
+
+  @media only screen and (min-width: 482px) {
+    .alignleft {
+      /*rtl:ignore*/
+      float: left;
+
+      /*rtl:ignore*/
+      margin-right: var(--global--spacing-horizontal);
+      margin-bottom: var(--global--spacing-vertical);
+    }
+
+    .entry-content > .alignleft {
+      max-width: calc(50% - var(--responsive--alignleft-margin));
+    }
+  }
+
+  /**
+ * .aligncenter
+ */
+  .aligncenter {
+    clear: both;
+    display: block;
+    float: none;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+  }
+
+  /**
+ * .alignright
+ */
+  .alignright {
+    margin-top: 0;
+    margin-bottom: var(--global--spacing-vertical);
+  }
+
+  > .alignright {
+    max-width: var(--responsive--aligndefault-width);
+  }
+
+  @media only screen and (min-width: 482px) {
+    .alignright {
+      /*rtl:ignore*/
+      float: right;
+
+      /*rtl:ignore*/
+      margin-left: var(--global--spacing-horizontal);
+    }
+
+    > .alignright {
+      max-width: calc(50% - var(--responsive--alignright-margin));
+    }
+  }
+
+  [class*='inner-container'] > .alignleft + *,
+  [class*='inner-container'] > .alignright + * {
+    margin-top: 0;
+  }
+
+  pre {
+    overflow: auto;
+  }
+
+  /**
+ * .alignwide
+ */
+  .alignwide {
+    clear: both;
+  }
+
+  /**
+ * .alignfull
+ */
+  .alignfull {
+    clear: both;
+  }
+
+  blockquote {
+    position: relative;
+    padding: 1rem;
+    background-color: theme(colors.gray.100);
+
+    &::before {
+      position: absolute;
+      content: '\201C';
+      font-size: 4em;
+      left: -0.5rem;
+      top: -1.8rem;
+      color: theme(colors.primary);
+    }
+  }
+}

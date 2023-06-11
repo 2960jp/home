@@ -1,0 +1,6 @@
+.site-footer {
+  .cookies-not-set & {
+    padding-bottom: 4rem;
+    background-color: theme(colors.primary);
+  }
+}

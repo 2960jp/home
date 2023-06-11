@@ -1,0 +1,150 @@
+.c-form {
+  overflow: hidden;
+  font-size: 16px;
+
+  > label,
+  > fieldset {
+    + label,
+    + fieldset {
+      margin-top: 2rem;
+    }
+  }
+
+  dl,
+  tr {
+    display: block;
+    + dl,
+    + tr {
+      margin-top: 2rem;
+    }
+
+    /* @media screen(xl) {
+      display: flex;
+    } */
+  }
+
+  dt,
+  legend,
+  th {
+    text-align: left;
+    display: block;
+    font-weight: bold;
+
+    /* @media screen(xl) {
+      width: 20rem;
+    } */
+  }
+
+  dd,
+  td {
+    display: block;
+    padding-left: 1px;
+    /* outline width */
+    /* @media screen(xl) {
+      width: calc(100% - 20rem);
+    } */
+
+    > dl {
+      margin-top: 1rem;
+      padding: 1rem;
+      padding-top: 0;
+      padding-right: 0;
+      border-left: 2px solid theme(colors.gray.200);
+
+      + dl {
+        margin-top: 0;
+      }
+    }
+
+    .entry-content & {
+      padding-left: 1px;
+    }
+  }
+
+  a {
+    text-decoration: underline;
+    color: theme(colors.red.500);
+  }
+
+  dt:not(.is-required),
+  .is-required {
+    &::before {
+      line-height: 1;
+      font-size: 0.8em;
+      padding: 0.125rem 0.25rem;
+      @apply rounded-sm;
+      vertical-align: middle;
+      display: inline-block;
+
+      margin-right: 0.5rem;
+    }
+  }
+
+  dt:not(.is-required) {
+    &::before {
+      content: '\4EFB\610F';
+      /* color: theme(colors.red.500); */
+      color: white;
+      background-color: theme(colors.dark);
+    }
+  }
+  .is-required {
+    &::before {
+      content: '\5FC5\9808';
+      /* color: theme(colors.red.500); */
+      color: white;
+      /* background-color: theme(colors.red.500); */
+      background-color: theme(colors.primary);
+    }
+  }
+  [type='text'],
+  [type='tel'],
+  [type='email'],
+  [type='number'] {
+    width: 100%;
+    padding: 1rem;
+    /* background-color: theme(colors.gray.200); */
+    background-color: white;
+
+    &[maxlength='8'] {
+      max-width: 12em;
+    }
+
+    &:focus {
+      outline-offset: -1px;
+      background-color: theme(colors.gray.100);
+    }
+  }
+  [type='tel'] {
+    max-width: 20em;
+  }
+  select,
+  [type='date'] {
+    appearance: none;
+    border: 2px solid theme(colors.gray.200);
+    border-radius: 4px;
+    padding: 8px 12px;
+    background-color: #fff;
+    /* text-align: center; */
+  }
+  textarea {
+    width: 100%;
+    padding: 1rem;
+    /* background-color: theme(colors.gray.200); */
+    background-color: white;
+    &:focus {
+      outline-offset: -1px;
+      background-color: theme(colors.gray.100);
+    }
+  }
+}
+
+.has-free-text {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.125rem;
+}
+
+[data-class='wpcf7cf_group'] {
+  margin-top: 1rem;
+}

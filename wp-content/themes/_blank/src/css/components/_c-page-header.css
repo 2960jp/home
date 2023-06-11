@@ -1,0 +1,105 @@
+.c-page-header {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  /* overflow: hidden; */
+  --page-header-pad: 14%;
+
+  @media screen(md) {
+    --page-header-pad: 3rem;
+  }
+  @media screen(lg) {
+    --page-header-pad: 5rem;
+  }
+
+  /* &::before,
+  &::after {
+    content: '';
+    background-color: #fff;
+    position: absolute;
+    width: 40%;
+    height: var(--page-header-pad);
+    z-index: -1;
+
+    @media (width < theme(screens.md)) {
+      width: var(--page-header-pad);
+    }
+  }
+
+  &::before {
+    left: 0;
+    top: 0;
+  }
+  &::after {
+    bottom: 0;
+    right: 0;
+    @media (width < theme(screens.md)) {
+      width: var(--page-header-pad);
+      height: 100%;
+    }
+  } */
+}
+
+.c-page-header-image-container {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  height: calc(100% + 120px);
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* @apply md:absolute md:right-0 md:top-0 md:-z-[1] md:w-full md:max-w-[1920px];
+
+  @media screen(md) {
+    height: calc(100% - var(--page-header-pad));
+  }
+
+  @media (width < theme(screens.md)) {
+    padding-left: var(--page-header-pad);
+  }
+
+  @media (width > 1920px) {
+    right: calc((100% - 1920px) / 2);
+  } */
+}
+
+.c-page-header-hdg-container {
+  position: relative;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  @apply py-12 md:pt-36 md:pb-24 lg:pt-52 lg:pb-36;
+
+  @media screen(md) {
+  }
+  @media screen(lg) {
+  }
+}
+
+.c-page-header-hdg {
+}
+.c-page-header-hdg-primary {
+  @apply block text-4xl font-thin uppercase lg:text-6xl font-nunito;
+  color: white;
+}
+.c-page-header-hdg-secondary {
+  display: inline-block;
+  /* background-color: theme(colors.primary); */
+  color: white;
+  margin-top: 0.5rem;
+  /* padding: 0.25rem 1rem; */
+  /* font-weight: bold; */
+
+  &::before {
+    content: '';
+    width: 0.875em;
+    height: 0.875em;
+    background-color: theme(colors.secondary);
+    display: inline-flex;
+    vertical-align: middle;
+    margin-right: 0.5rem;
+  }
+}

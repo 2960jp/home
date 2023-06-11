@@ -1,0 +1,24 @@
+.l-container {
+  width: 100%;
+  @apply container max-w-screen-2xl bg-white z-20 relative;
+
+  .withsidebar & {
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+
+    @media screen(lg) {
+      flex-direction: row;
+      /* align-items: flex-end; */
+
+      .site-main {
+        width: calc(100% - 1rem - 280px);
+      }
+
+      .widget-area {
+        width: 280px;
+        margin-top: 3rem;
+      }
+    }
+  }
+}

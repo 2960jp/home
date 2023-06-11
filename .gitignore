@@ -1,0 +1,49 @@
+/*
+!wp-content/
+wp-content/*
+!wp-content/themes/
+wp-content/themes/*
+!wp-content/themes/_blank
+wp-content/themes/_blank/assets
+
+# ignore all files starting with . or ~
+.*
+~*
+
+!.gitignore
+!README.md
+!.gitkeep
+
+# ignore node dependency directories (used by grunt)
+node_modules/
+
+# ignore OS generated files
+ehthumbs.db
+Thumbs.db
+
+
+*.idea
+*.vscode
+
+# ignore log files and databases
+*.log
+*.sql
+*.sqlite
+
+# ignore compiled files
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# ignore packaged files
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip

@@ -1,0 +1,50 @@
+.widget-area {
+  margin-bottom: 3rem;
+}
+
+.widget-title {
+  font-weight: bold;
+  background-color: theme(colors.primary);
+  color: white;
+  padding: 0.5rem;
+}
+
+.widget {
+  + .widget {
+    margin-top: 1.5rem;
+  }
+
+  ul {
+    font-size: 0.9rem;
+
+    > li {
+      border-bottom: 1px solid theme(colors.gray.200);
+
+      + li {
+        margin-top: 0.25rem;
+      }
+
+      a {
+        padding-top: 0.25rem;
+        padding-bottom: 0.25rem;
+        padding-left: 0.5rem;
+        display: inline-flex;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+.widget_recent_entries {
+  ul > li {
+    a {
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+  }
+}
