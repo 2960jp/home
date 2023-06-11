@@ -16,6 +16,8 @@ wp-content/themes/_blank/assets
 
 # ignore node dependency directories (used by grunt)
 node_modules/
+tmp/*
+!/tmp/.gitkeep
 
 # ignore OS generated files
 ehthumbs.db
