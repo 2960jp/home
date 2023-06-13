@@ -181,6 +181,7 @@ get_header();
 				<div class="relative">
 					<?php
 					$company_name = get_field('company_name', $common_info_id);
+					$tel = get_field('tel', $common_info_id);
 					$postal_code = get_field('postal_code', $common_info_id);
 					$address_01 = get_field('address_01', $common_info_id);
 					$address_02 = get_field('address_02', $common_info_id);
@@ -205,6 +206,14 @@ get_header();
 							<dd><?php echo $address_text; ?></dd>
 						</dl>
 					<?php endif;
+					if ($tel) :
+					?>
+						<dl class="c-dl">
+							<dt>連絡先</dt>
+							<dd><?php echo $tel; ?></dd>
+						</dl>
+					<?php endif;
+
 					if ($ceo) :
 					?>
 						<dl class="c-dl">
