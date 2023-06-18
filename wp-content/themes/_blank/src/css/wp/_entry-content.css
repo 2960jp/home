@@ -100,8 +100,8 @@
     h6 {
       letter-spacing: 0.1em;
     }
-    h1:not([class*='c-title']),
-    h2:not([class*='c-title']) {
+    /* h1:not([class*='c-title']), */
+    h4:not([class*='c-title']) {
       position: relative;
       /* padding-bottom: 0.5rem; */
       padding-top: 1rem;
@@ -146,14 +146,14 @@
       } */
     }
 
-    h3:not([class*='c-title']) {
+    h2:not([class*='c-title']) {
       border-top: 2px solid theme(colors.primary);
       border-bottom: 2px solid theme(colors.primary);
       padding-top: 1rem;
       padding-bottom: 1rem;
     }
 
-    h4:not([class*='c-title']) {
+    h3:not([class*='c-title']) {
       position: relative;
       padding: 0.5rem;
       padding-left: 1.25rem;
@@ -168,7 +168,7 @@
         width: 0.625rem;
         height: 0.625rem;
         border-radius: 9999px;
-        background-color: theme(colors.primary);
+        background-color: theme(colors.secondary);
       }
     }
     h5:not([class*='c-title']),
@@ -187,6 +187,16 @@
         height: 4px;
       }
       /* border-left: 4px solid theme(colors.primary); */
+    }
+    h6:not([class*='c-title']) {
+      &::before {
+        background-color: theme(colors.secondary);
+      }
+    }
+    h1:not([class*='c-title']) {
+      padding: 0.5rem;
+      background-color: theme(colors.primary);
+      color: white;
     }
   }
 
